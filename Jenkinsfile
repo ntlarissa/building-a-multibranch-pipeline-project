@@ -3,12 +3,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo yum install npm'
+                sh 'echo Hello World!!!'
             }
         }
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
             }
         }
     }
